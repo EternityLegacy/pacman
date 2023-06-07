@@ -93,8 +93,8 @@ var getGhostNames = function(mode) {
     else if (mode == GAME_PACMAN) {
         return ["blinky","pinky","inky","clyde"];
     }
-    else if (mode == GAME_COOKIE) {
-        return ["elmo","piggy","rosita","zoe"];
+    else if (mode == GAME_COOKIE) { //-------------------- Edited the CookieMan ghost names
+        return ["blinky","pinky","inky","clyde"];
     }
 };
 
@@ -106,7 +106,7 @@ var getGhostDrawFunc = function(mode) {
         return atlas.drawMonsterSprite;
     }
     else if (mode == GAME_COOKIE) {
-        return atlas.drawMuppetSprite;
+        return atlas.drawGhostSprite; // ------------------ Edited the ghosts drawn in CookieMan mode
     }
     else {
         return atlas.drawGhostSprite;
@@ -127,8 +127,8 @@ var getPlayerDrawFunc = function(mode) {
         return atlas.drawMsPacmanSprite;
     }
     else if (mode == GAME_COOKIE) {
-        //return atlas.drawCookiemanSprite;
-        return drawCookiemanSprite;
+        //return atlas.drawPacmanSprite; // ---------------------- Edited the player drawn in CookieMan mode
+        return drawPacmanSprite;
     }
 };
 
